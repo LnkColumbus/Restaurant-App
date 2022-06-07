@@ -35,7 +35,7 @@ export const Navbar = () => {
                             textDecoration: 'none',
                         }}
                     >
-                        LOGO
+                        RESTAURANT
                     </Typography>
 
                     <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -67,7 +67,17 @@ export const Navbar = () => {
                                 display: { xs: 'block', md: 'none' },
                             }}
                         >
-                            <Link component={RouterLink} to="/" sx={{ textDecoration: "none" }}>
+                            <Link component={RouterLink} to="/locations" sx={{ textDecoration: "none" }}>
+                                <MenuItem onClick={handleCloseNavMenu}>
+                                    <Typography textAlign="center">Locations</Typography>
+                                </MenuItem>
+                            </Link>
+                            <Link component={RouterLink} to="/tables" sx={{ textDecoration: "none" }}>
+                                <MenuItem onClick={handleCloseNavMenu}>
+                                    <Typography textAlign="center">Locations</Typography>
+                                </MenuItem>
+                            </Link>
+                            <Link component={RouterLink} to="/menu" sx={{ textDecoration: "none" }}>
                                 <MenuItem onClick={handleCloseNavMenu}>
                                     <Typography textAlign="center">Locations</Typography>
                                 </MenuItem>
@@ -99,6 +109,22 @@ export const Navbar = () => {
                                 sx={{ my: 2, color: 'white', display: 'block' }}
                             >
                                 Locations
+                            </Button>
+                        </Link>
+                        <Link component={RouterLink} to="/tables" >
+                            <Button
+                                onClick={handleCloseNavMenu}
+                                sx={{ my: 2, color: 'white', display: 'block' }}
+                            >
+                                Tables
+                            </Button>
+                        </Link>
+                        <Link component={RouterLink} to="/menu" >
+                            <Button
+                                onClick={handleCloseNavMenu}
+                                sx={{ my: 2, color: 'white', display: 'block' }}
+                            >
+                                Menu
                             </Button>
                         </Link>
                     </Box>
